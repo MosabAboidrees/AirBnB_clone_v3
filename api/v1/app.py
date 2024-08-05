@@ -2,7 +2,7 @@
 """API Status Module"""
 
 
-from flask import jsonify, Flask, request
+from flask import Flask
 from models import storage
 from api.v1.views import app_views
 
