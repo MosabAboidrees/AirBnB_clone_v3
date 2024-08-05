@@ -117,7 +117,7 @@ class TestFileStorage(unittest.TestCase):
     def test_count(self):
         """
         Test that the `count` method returns the correct
-        number of elements in the database.
+        number of elements in the database
 
         This test verifies that the `count` method accurately
         reflects the total number of objects stored in the database,
