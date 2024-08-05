@@ -11,17 +11,14 @@ app.register_blueprint(app_views)
 
 
 @app.teardown_appcontext
-def close_database():
+def close_database(error):
     """Close the storage database"""
     storage.close()
 
 
 if __name__ == '__main__':
     """ Main Function """
-    host = environ.get('HBNB_API_HOST')
-    port = environ.get('HBNB_API_PORT')
-    if not host:
-        host = '0.0.0.0'
-    if not port:
-        port = '5000'
+    host = environ.get('HBNB_API_HOST', '0.0.0.0')
+    port = environ.get('HBNB_API_PORT', '5000')
+
     app.run(host=host, port=port, threaded=True)
