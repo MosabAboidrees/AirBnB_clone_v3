@@ -160,7 +160,7 @@ class TestFileStorage(unittest.TestCase):
     def test_count(self):
         """
         Test that the `count` method returns the correct number of objects
-        in file.json.
+        in file.json
 
         This test verifies the accuracy of the `count` method by checking
         that it returns the expected number of objects for a specific class
