@@ -34,14 +34,16 @@ def page_not_found(error):
     This function returns a custom JSON response with a 404 status
     code when a resource is not found.
     """
-    # Return a JSON response indicating that the requested resource was not found
+    # Return a JSON response indicating that the requested
+    # resource was not found
     return make_response(jsonify({"error": "Not found"}), 404)
 
 
 # Configure Swagger for API documentation
 app.config['SWAGGER'] = {
     'title': 'AirBnB clone - RESTful API',
-    'description': 'This is the API that was created for the hbnb restful API project, '
+    'description': 'This is the API that was created'
+                   'for the hbnb restful API project, '
                    'all the documentation will be shown below.',
     'uiversion': 3  # Set the UI version for Swagger
 }
@@ -52,9 +54,11 @@ Swagger(app)
 # Entry point for the application
 if __name__ == "__main__":
 
-    # Get the host and port configuration from environment variables or set defaults
+    # Get the host and port configuration from
+    # environment variables or set defaults
     host = getenv('HBNB_API_HOST', default='0.0.0.0')
     port = getenv('HBNB_API_PORT', default=5000)
 
-    # Run the Flask application with the specified host, port, and threading enabled
+    # Run the Flask application with the specified
+    # host, port, and threading enabled
     app.run(host, int(port), threaded=True)
