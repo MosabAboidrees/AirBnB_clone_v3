@@ -1,4 +1,4 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 """
 This module contains the BaseModel class, which serves as the foundation
 for other models in the application. It provides common attributes and
